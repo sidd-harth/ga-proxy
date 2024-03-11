@@ -1,0 +1,14 @@
+name: proxy
+
+on:
+    push:
+
+jobs:
+  check_proxy:
+    runs-on: kk-k
+    steps:
+      - name: Verify Proxy Settings
+        run: |
+          echo "HTTPS Proxy: $https_proxy"
+          echo "HTTP Proxy: $http_proxy"
+          echo "No Proxy: $no_proxy"
