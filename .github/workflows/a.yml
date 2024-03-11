@@ -4,6 +4,15 @@ on:
     push:
 
 jobs:
+  no_proxy:
+    runs-on: killercoda
+    steps:
+      - name: Verify Proxy Settings
+        run: |
+          echo "HTTPS Proxy: $https_proxy"
+          echo "HTTP Proxy: $http_proxy"
+          echo "No Proxy: $no_proxy"
+          curl -v https://google.com
   check_proxy:
     runs-on: kk-k
     steps:
@@ -12,3 +21,4 @@ jobs:
           echo "HTTPS Proxy: $https_proxy"
           echo "HTTP Proxy: $http_proxy"
           echo "No Proxy: $no_proxy"
+          curl -v https://google.com
