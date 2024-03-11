@@ -12,7 +12,7 @@ jobs:
           echo "HTTPS Proxy: $https_proxy"
           echo "HTTP Proxy: $http_proxy"
           echo "No Proxy: $no_proxy"
-          curl -v https://google.com
+          curl -v https://httpbin.org/ip
   check_proxy:
     runs-on: kk-k
     steps:
@@ -21,4 +21,4 @@ jobs:
           echo "HTTPS Proxy: $https_proxy"
           echo "HTTP Proxy: $http_proxy"
           echo "No Proxy: $no_proxy"
-          curl -v https://google.com
+          curl -v https://httpbin.org/ip
